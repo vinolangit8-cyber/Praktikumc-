@@ -1,0 +1,43 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double angka[5];
+    double total = 0;
+    double rataRata;
+    double totalSelisihKuadrat = 0;
+
+    for (int i = 0; i < size(angka); i++)
+    {
+        cout << "Masukkan nilai ke-" << i + 1 << " : ";
+        cin >> angka[i];
+        total += angka[i];
+    }
+
+    rataRata = total / size(angka);
+
+    for (int i = 0; i < size(angka); i++)
+    {
+        totalSelisihKuadrat += (angka[i] - rataRata) *
+                               (angka[i] - rataRata);
+    }
+
+    cout << "==========================" << endl
+         << left;
+
+    cout << setw(15) << "Nilai Rata-rata" << ": "
+         << fixed << setprecision(2) << rataRata << endl;
+
+    cout << setw(15) << "Standar Deviasi" << ": "
+         << fixed << setprecision(2)
+         << sqrt(totalSelisihKuadrat / size(angka)) << endl;
+
+    cout << setw(15) << "Tingkat Variasi" << ": "
+         << (sqrt(totalSelisihKuadrat / size(angka)) > 2
+                 ? "Tinggi"
+                 : "Rendah")
+         << endl;
+}
