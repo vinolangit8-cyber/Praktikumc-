@@ -19,7 +19,7 @@ int main()
     cout << endl;
     cout << setw(30) << "Masukkan pilihan Barang" << ": ";
     cin >> urutanBarang;
-    switch (urutanBarang)
+   switch (urutanBarang)
     {
         case 1:
         namaBarang = "Beras 5kg";

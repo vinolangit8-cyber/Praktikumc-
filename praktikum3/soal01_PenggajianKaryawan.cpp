@@ -53,10 +53,5 @@ int main()
         cout << "Input Tidak Valid!!" << endl;
         return 0;
     }
-
-    cout << "==================================================================\n";
-    cout << setw(20) << "Nama karyawan" << setw(20) << "Jumlah Jam Kerja" << setw(20) << "Posisi" << setw(20) << "Tarif Per Jam" << setw(20) << "Total Gaji" << endl;
-    cout << setw(20) << NamaKaryawan << setw(20) << JumlahJamKerja << setw(20) << namaposisi << setw(20) << TarifPerjam << setw(20) << JumlahJamKerja * TarifPerjam << endl;
-
-    return 0;
 }
+    
