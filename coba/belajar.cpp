@@ -1,51 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int jumlahMapel;
-    double nilai, total, rataRata;
-    int ulang;
+#include <iostream>
+using namespace std;
 
-    do
-    {
-        total = 0;
+int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
 
-        cout << "Masukkan jumlah mata pelajaran: ";
-        cin >> jumlahMapel;
-
-        for (int i = 1; i <= jumlahMapel; i++)
-        {
-            cout << "Masukkan nilai mata pelajaran ke-" << i << ": ";
-            cin >> nilai;
-            total += nilai;
-        }
-
-        rataRata = total / jumlahMapel;
-
-        cout << "Rata-rata Nilai: " << rataRata << endl;
-
-        if (rataRata > 85)
-        {
-            cout << "Prestasi: Sangat Baik" << endl;
-        }
-        else if (rataRata >= 70)
-        {
-            cout << "Prestasi: Baik" << endl;
-        }
-        else if (rataRata >= 50)
-        {
-            cout << "Prestasi: Cukup" << endl;
-        }
-        else
-        {
-            cout << "Prestasi: Perlu Peningkatan" << endl;
-        }
-
-        cout << "Ingin menghitung nilai untuk siswa lain? (1 untuk ya, selain itu untuk tidak): ";
-        cin >> ulang;
-
-    } while (ulang == 1);
-
+int main() {
+    int number = 5;
+    cout << "Fibonacci ke-" << number << " adalah: " << fibonacci(number) << endl;
     return 0;
 }
